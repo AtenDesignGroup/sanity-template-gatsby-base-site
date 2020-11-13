@@ -1,0 +1,37 @@
+{
+  "repository": {
+    "name": "sanity-template-gatsby-base-site",
+    "owner": "brentrobbins",
+    "private": false
+  },
+  "sanity": {
+    "dataset": "production",
+    "projectId": "raliulr0",
+    "projectTitle": "Base Gatsby Site",
+    "domainName": "gatsbyjs.com"
+  },
+  "user": {
+    "profileImage": "https://avatars2.githubusercontent.com/u/727491?s=460&v=4",
+    "displayName": "Brent Robbins",
+    "email": "brent@variantstudios.com"
+  },
+  "userInput": {},
+  "deployments": {
+    "studio": {
+      "url": "https://sanity-template-gatsby-base-site-rf4qpk9y.netlify.com/",
+      "providerName": "netlify",
+      "providerInfo": {
+        "buildHookId": "5cc04d5199df1802277a6e91",
+        "siteId": "b3b7bb87-000f-42a3-9ed3-83358be97dde"
+      }
+    },
+    "web": {
+      "url": "https://sanity-gatsby-blog-web-skupqnos.netlify.com/",
+      "providerName": "netlify",
+      "providerInfo": {
+        "buildHookId": "5caf2962008b0b042f8df19a",
+        "siteId": "7e740745-2e2e-4427-be81-aded75334337"
+      }
+    }
+  }
+}
