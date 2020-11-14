@@ -21,9 +21,18 @@ You develop the templates in `/template`, and review your changes in `/build`.
 
 3. **Run `npm run dev` in root folder.** This will build the template files to `/build`. This is how the code will look for those who install the project later.
 
-4. **Run `npm install` in `./build/web` and `sanity install && sanity graphql deploy` in `/build/studio`** This will install the necessary dependencies for the Gatsby frontend and the Studio.
+4. Install the latest version of the Sanity CLI by running `npm install -g @sanity/cli`
 
-5. **Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`**. This will start the development servers for the Gatsby frontend and Sanity Studio.
+5. **Run `npm install` in `./build/web` and `sanity install && npm install && yarn && sanity graphql deploy` in `/build/studio`** This will install the necessary dependencies for the Gatsby frontend and the Studio. If you see a **401 error** after running `sanity graphql deploy`, try running `sanity logout` and then `sanity login` to make sure your CLI is logged into your Sanity.io account.
+
+6. **Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`**. This will start the development servers for the Gatsby frontend and Sanity Studio.
+
+### Development URLs
+
+- Sanity Studio: http://localhost:3333
+- Sanity GraphQL: https://<sanity.projectId>.api.sanity.io/v1/graphql/production/default
+- Gatsby Website: http://localhost:8000
+- Gatsby GraphQL: http://localhost:8000/___graphql
 
 ## Notes
 
