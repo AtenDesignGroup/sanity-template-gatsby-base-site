@@ -27,6 +27,10 @@ You develop the templates in `/template`, and review your changes in `/build`.
 
 6. **Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`**. This will start the development servers for the Gatsby frontend and Sanity Studio.
 
+### Export the updated Seed Data/Content
+
+Navigate into the studio build directory by going to `/build/studio` and run the following command `sanity dataset export production ../../data/production.tar.gz` and press `Y` to overwrite it.
+
 ### Development URLs
 
 - Sanity Studio: http://localhost:3333

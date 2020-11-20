@@ -1,7 +1,10 @@
+import {MdPerson as Icon} from 'react-icons/fa'
+
 export default {
   name: 'author',
   type: 'document',
   title: 'Author',
+  icon: Icon,
   fields: [
     {
       name: 'title',
@@ -47,9 +50,17 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'title',
       subtitle: 'slug.current',
-      media: 'image'
+      media: 'image',
+    },
+    prepare (selection) {
+      const {title, subtitle, media} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/blog/author/${subtitle}`,
+        media: media
+      }
     }
   }
 }

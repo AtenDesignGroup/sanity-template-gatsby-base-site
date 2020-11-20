@@ -24,10 +24,5 @@ export default {
         type: 'siteLink'
       }]
     }
-  ],
-  preview: {
-    select: {
-      title: 'title'
-    }
-  }
+  ]
 }
