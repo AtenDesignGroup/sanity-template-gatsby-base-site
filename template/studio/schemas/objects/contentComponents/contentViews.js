@@ -15,7 +15,7 @@ export default {
       of: [{type: 'string'}],
       options: {
         list: [
-          {title: 'View - Blog Post', value: 'blogPostView'},
+          {title: 'View - Blog Posts', value: 'blogPostView'},
           {title: 'Webform - Contact', value: 'wfContact'},
           {title: 'Google Search', value: 'googleSearch'}
         ]
@@ -30,7 +30,7 @@ export default {
       let viewTitle = title
       // let title = title
       if (title && title === 'blogPostView') {
-        viewTitle = 'View - Blog Post'
+        viewTitle = 'View - Blog Posts'
       } else if (title && title === 'wfContact') {
         viewTitle = 'Webform - Contact'
       } else if (title && title === 'googleSearch') {
