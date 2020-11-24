@@ -11,7 +11,7 @@
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "start": "run-p start:**",
-    "start:app": "npm run develop",
+    "start:app": "npm run dev",
     "start:lambda": "netlify-lambda serve src/lambda",
     "build:app": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "build:lambda": "netlify-lambda build src/lambda"

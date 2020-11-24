@@ -27,6 +27,8 @@ You develop the templates in `/template`, and review your changes in `/build`.
 
 6. **Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`**. This will start the development servers for the Gatsby frontend and Sanity Studio.
 
+7. In the `./build/web`, you will need to duplicate the `.env.development.template` file and rename it `.env.development` and add the missing values.
+
 ### Development URLs
 
 - Sanity Studio: http://localhost:3333

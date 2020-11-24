@@ -48,7 +48,7 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
       }
   }
   `)
-  // console.log(data.topMiniNav)
+  // console.log(data.mainNav)
   return (
     <>
       <div className={styles.root}>
