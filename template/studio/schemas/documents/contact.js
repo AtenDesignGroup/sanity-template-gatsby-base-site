@@ -37,13 +37,5 @@ export default {
       type: 'seo',
       validation: Rule => Rule.required()
     }
-  ],
-  preview: {
-    select: {
-      title: 'title',
-      subtitle: 'seoSettings.title',
-      description: 'seoSettings.description',
-      media: 'mainImage'
-    }
-  }
+  ]
 }

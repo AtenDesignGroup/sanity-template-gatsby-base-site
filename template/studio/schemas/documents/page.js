@@ -46,9 +46,14 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'seoSettings.title',
-      description: 'seoSettings.description',
-      media: 'mainImage'
+      subtitle: 'slug.current',
+    },
+    prepare (selection) {
+      const {title, subtitle} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/${subtitle}`,
+      }
     }
   }
 }

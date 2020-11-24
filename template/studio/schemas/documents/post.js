@@ -34,8 +34,8 @@ export default {
       },
       type: 'richDate',
       'timezone': 'America/Denver',
-      validation: Rule => Rule.required(),
-      description: 'This can be used to schedule post for publishing'
+      // validation: Rule => Rule.required(),
+      description: 'This can be used to schedule post for publishing. If not used it will be immediately published upon rebuild.'
     },
     {
       name: 'authors',
@@ -108,9 +108,16 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'seoSettings.title',
-      description: 'seoSettings.description',
+      subtitle: 'slug.current',
       media: 'mainImage'
+    },
+    prepare (selection) {
+      const {title, subtitle, media} = selection
+      return {
+        title: `${title}`,
+        subtitle: `/blog/${subtitle}`,
+        media: media
+      }
     }
   }
 }

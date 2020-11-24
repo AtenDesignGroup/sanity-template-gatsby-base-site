@@ -65,15 +65,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Open Sans`,
-            subsets: [`latin`],
-            variants: [`400`, `700`]
-          }
-        ]
+          `Source Sans Pro:400,700`,
+        ],
+        display: 'swap'
       }
     },
     {

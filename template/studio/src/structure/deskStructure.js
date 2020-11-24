@@ -1,10 +1,14 @@
 import S from '@sanity/desk-tool/structure-builder'
 import {
   MdSettings,
-  // MdPerson,
+  MdPerson,
+  MdPeople,
   MdDescription,
-  MdLocalOffer
+  MdLocalOffer,
+  FaNewspaper,
+  AiFillTags
 } from 'react-icons/md'
+
 
 import IframePreview from '../previews/IframePreview'
 
@@ -67,12 +71,12 @@ export default () =>
               // Add the first list item
               S.listItem()
                 .title('Blog posts')
-                .icon(MdDescription)
+                .icon(FaNewspaper)
                 .schemaType('post')
                 .child(S.documentTypeList('post').title('Blog posts')),
               S.listItem()
                 .title('Authors')
-                // .icon(MdLocalOffer)
+                .icon(MdPeople)
                 .schemaType('author')
                 .child(S.documentTypeList('author').title('Authors')),
               S.listItem()
@@ -82,7 +86,7 @@ export default () =>
                 .child(S.documentTypeList('category').title('Categories')),
               S.listItem()
                 .title('Tags')
-                .icon(MdLocalOffer)
+                .icon(AiFillTags)
                 .schemaType('tag')
                 .child(S.documentTypeList('tag').title('Tags'))
             ])
