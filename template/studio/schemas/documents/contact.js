@@ -1,11 +1,14 @@
-import {MdEmail} from 'react-icons/md'
+// import {MdEmail} from 'react-icons/md'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"✉️"}</span>
+
 
 export default {
   name: 'contact',
   title: 'Contact',
   type: 'document',
   __experimental_actions: ['update', 'publish', 'delete'],
-  icon: MdEmail,
+  icon: Icon,
   liveEdit: false,
   fields: [
     {

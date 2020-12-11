@@ -114,15 +114,15 @@
     }
     @nest & .logoWrapper {
       /* width: 200px; */
-      height: 50px;
+      width: 120px;
       @media (--media-min-large) {
-        height: 50px;
+        width: 160px;
       }
       @media (--media-min-large) {
-        height: 80px;
+        width: 180px;
       }
       @media (--media-min-xxlarge) {
-        height: 120px;
+        width: 200px;
       }
     }
 
@@ -134,17 +134,6 @@
     }
   }
 }
-
-/* @media (--media-max-large) {
-  .nav ul li ul {
-    margin: 0 0 0 20px;
-  }
-  .nav ul > li {
-    margin:5px 0;
-  }
-
-} */
-
 
 @media (--media-min-large) {
   .nav ul li, .nav ul li a {
@@ -194,11 +183,9 @@
     background-clip: padding-box;
   }
   .nav ul li:hover > ul
-  /* .nav ul li ul:hover  */
   {
     visibility: visible;
     opacity: 1;
-    /* display: block; */
     transition: all 0.3s ease;
     z-index: 1;
     margin-top: 5px;

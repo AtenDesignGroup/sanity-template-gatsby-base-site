@@ -1,11 +1,13 @@
 // import {RiPagesLine as Icon} from 'react-icons/ri'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"📝"}</span>
+
 
 export default {
   name: 'page',
   title: 'Super Page',
   type: 'document',
-  // icon: Icon,
-  liveEdit: false,
+  icon: Icon,
   __experimental_actions: ['update', 'publish', 'create', 'delete'],
   fields: [
     {

@@ -1,4 +1,6 @@
-import {MdLocalOffer as Icon} from 'react-icons/ai'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🏷"}</span>
+//import {MdLocalOffer as Icon} from 'react-icons/ai'
 
 export default {
   name: 'tag',

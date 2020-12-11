@@ -1,8 +1,31 @@
+import React from 'react'
+import {MdImage as Icon} from 'react-icons/md'
+
+const GalleryPreview = ({value}) => {
+  const ImageWrapper = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '20px',
+    gridRowGap: '20px'
+  }
+  return (
+    <div style={ImageWrapper}>
+      {value.images && value.images && value.images.map(image => (
+        <div key={image._key}>
+         <Icon />
+        </div>
+      ))}
+    </div>
+  )
+}
+import MdSlideshow from 'react-icons/md'
+
+
 export default {
   name: 'slideImage',
   title: 'Slide',
   type: 'object',
-
+  icon: MdSlideshow,
   fields: [
     {
       name: 'title',
@@ -28,5 +51,11 @@ export default {
         hotspot: false
       }
     }
-  ]
+  ],
+  preview: {
+    select: {
+      images: 'images'
+    },
+    component: GalleryPreview
+  }
 }

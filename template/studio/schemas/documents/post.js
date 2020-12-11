@@ -1,12 +1,12 @@
-import {FaNewspaper as Icon} from 'react-icons/fa'
-
+//import {FaNewspaper as Icon} from 'react-icons/fa'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"📰"}</span>
 export default {
   name: 'post',
   title: 'Blog Post',
   type: 'document',
   icon: Icon,
-  liveEdit: false,
-  // __experimental_actions: ['update', 'publish', 'create', 'delete'],
+  __experimental_actions: ['update', 'publish', 'create', 'delete'],
   fields: [
     {
       name: 'title',

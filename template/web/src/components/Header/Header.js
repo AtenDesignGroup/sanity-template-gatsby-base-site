@@ -1,17 +1,13 @@
 import {Link, graphql, useStaticQuery} from 'gatsby'
 import React, {useEffect, useState} from 'react'
-// import Image from 'gatsby-image'
+import {cn} from '../../lib/helpers'
 import Navigation from './Navigation'
-
+import styles from './header.module.css'
 import Logo from '../../assets/svgs/logo.svg'
 
-import {cn} from '../../lib/helpers'
-
-import styles from './header.module.css'
 
 const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
   const [mobileStatus, setMobileStatus] = useState(false)
-  // console.log({mainImage})
   useEffect(() => {
     const handleEsc = (event) => {
       if (event.keyCode === 27) {

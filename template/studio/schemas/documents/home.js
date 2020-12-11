@@ -1,7 +1,11 @@
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🏠"}</span>
+
 export default {
   name: 'home',
   title: 'Home',
   type: 'document',
+  icon: Icon,
   liveEdit: false,
   // __experimental_actions: ['update', 'publish'],
   fields: [

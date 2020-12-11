@@ -10,7 +10,6 @@ export default function Footer () {
   {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
-
     }
     footerNav: sanityNavigation(_id: { eq: "footerNav" }) {
       links {
@@ -26,30 +25,22 @@ export default function Footer () {
     }
   }
   `)
-  // console.log({data})
-  // console.log(data.footerNav)
-
   return (
     <>
       <footer className={styles.footer} >
         <div className={styles.footerWrapper}>
-
           <div className={styles.footerTopWrapper}>
-
             <div className={styles.footerTopSecond}>
               {/* Footer Navigation */}
-              {/* <h3>Quick Links</h3> */}
               <Navigation nav={data.footerNav} />
             </div>
-
           </div>
-
         </div>
       </footer>
       <footer className={styles.footerBottom} >
         <div className={styles.footerWrapper}>
           <div className={styles.footerBottomWrapper}>
-            <span> &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved. Site by: <a href='https://www.variantstudios.com' target='_blank' rel='noopener noreferrer'>Variant Studios</a>.</span>
+            <span> &copy; {new Date().getFullYear()} {data.site.title} All Rights Reserved.</span>
           </div>
         </div>
       </footer>

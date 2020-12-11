@@ -1,4 +1,6 @@
-import {MdPerson as Icon} from 'react-icons/fa'
+//import {MdPerson as Icon} from 'react-icons/fa'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🙂"}</span>
 
 export default {
   name: 'author',

@@ -1,10 +1,12 @@
-import {MdMenu} from 'react-icons/md'
+// import {MdMenu} from 'react-icons/md'
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🔗"}</span>
 
 export default {
   name: 'navigation',
   title: 'Navigation',
   type: 'document',
-  icon: MdMenu,
+  icon: Icon,
   liveEdit: false,
   // __experimental_actions: ['update', 'publish'],
   fields: [

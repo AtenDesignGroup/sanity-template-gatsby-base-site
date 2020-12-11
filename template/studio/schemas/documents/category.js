@@ -1,7 +1,11 @@
+import React from 'react'
+const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🗂"}</span>
+
 export default {
   name: 'category',
   type: 'document',
   title: 'Category',
+  icon: Icon,
   liveEdit: false,
   fields: [
     {

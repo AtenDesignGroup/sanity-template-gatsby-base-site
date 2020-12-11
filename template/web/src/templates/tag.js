@@ -67,11 +67,11 @@ const TagPage = ({data: {sanityTag: page, allSanityPost: posts}}) => {
   const postsTest = posts.edges.map(({node}) => node).filter(post => post.publishedAt.local <= todayDate)
   return (
     <Layout title={page.title}>
-      <div className='layout__wrapper  noTopMargin noBottomMargin dotsBlueTheme'>
+      <div className='layout__wrapper  noTopMargin noBottomMargin'>
         <div className='layout__oneCol content__wrapper--whiteBackground'>
           <div className='layout__colOne'>
 
-            {page.seoSettings && page.seoSettings.title && page.seoSettings.description &&
+        {page.seoSettings && page.seoSettings.title && page.seoSettings.description &&
         (<SEO title={page.seoSettings.title} description={page.seoSettings.description} openGraphImage={page.seoSettings.openGraphImage ? page.seoSettings.openGraphImage.asset.url : null} />
         )}
             <div className={styles.pageTitleWrapper}>
