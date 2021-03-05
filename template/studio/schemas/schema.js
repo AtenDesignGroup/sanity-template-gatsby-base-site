@@ -15,8 +15,6 @@ import siteSettings from './documents/siteSettings'
 import navigation from './documents/navigation'
 import post from './documents/post'
 import tag from './documents/tag'
-import webform from './documents/webform'
-import submission from './objects/submission'
 
 // Object types
 import siteLink from './objects/siteLink'
@@ -62,7 +60,6 @@ export default createSchema({
     home,
     tag,
     author,
-    submission,
     bodyPortableText,
     mainImage,
     richDate,
@@ -88,7 +85,6 @@ export default createSchema({
     vimeo,
     imageBackground,
     contentViews,
-    webform,
     flexibleContentOptions,
     flexibleContent,
     flexibleContentLayout,

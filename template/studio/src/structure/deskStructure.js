@@ -9,7 +9,6 @@ import {
   AiFillTags
 } from 'react-icons/md'
 
-
 import IframePreview from '../previews/IframePreview'
 
 // TODO: Web preview configuration
@@ -125,29 +124,6 @@ export default () =>
                 .child(S.documentTypeList('landingPage').title('Landing Pages'))
             ])
         ),
-
-      S.listItem()
-        // Give it a title
-        .title('Webforms')
-        .child(
-          // Make a list in the second pane called Portfolio
-          S.list()
-            .title('Webforms')
-            .items([
-              // Add the first list item
-              S.listItem()
-                .title('Contact form')
-                // .icon(MdLocalOffer)
-                .schemaType('webform')
-                .child(
-                  S.editor()
-                    .schemaType('webform')
-                    .documentId('webform')
-                    .title('Contact form')
-                )
-            ])
-        ),
-
       S.listItem()
         // Give it a title
         .title('Navigation')
@@ -183,7 +159,7 @@ export default () =>
 
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['category', 'post', 'tag', 'author', 'siteSettings', 'home', 'page', 'landingPage', 'webform', 'navigation'].includes(
+          !['category', 'post', 'tag', 'author', 'siteSettings', 'home', 'page', 'landingPage', 'navigation'].includes(
             listItem.getId()
           )
       )

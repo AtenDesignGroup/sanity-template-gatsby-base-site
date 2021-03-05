@@ -68,7 +68,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Source Sans Pro:400,700`,
+          `Source Sans Pro:400,700`
         ],
         display: 'swap'
       }
@@ -78,7 +78,7 @@ module.exports = {
       options: {
         output: `/sitemap.xml`,
         exclude: [
-          `/contact/thank-you`, `404`, `404.html`
+          `404`, `404.html`
         ],
         query: `
           {

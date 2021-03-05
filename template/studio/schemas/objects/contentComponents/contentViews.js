@@ -16,7 +16,6 @@ export default {
       options: {
         list: [
           {title: 'View - Blog Posts', value: 'blogPostView'},
-          {title: 'Webform - Contact', value: 'wfContact'},
           {title: 'Google Search', value: 'googleSearch'}
         ]
       }
@@ -31,8 +30,6 @@ export default {
       // let title = title
       if (title && title === 'blogPostView') {
         viewTitle = 'View - Blog Posts'
-      } else if (title && title === 'wfContact') {
-        viewTitle = 'Webform - Contact'
       } else if (title && title === 'googleSearch') {
         viewTitle = 'Google Search'
       } else {
