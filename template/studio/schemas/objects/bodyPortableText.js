@@ -82,12 +82,6 @@ export default {
       options: {hotspot: false}
     },
     {
-      type: 'slideshow'
-    },
-    {
-      type: 'imageGallery'
-    },
-    {
       type: 'youtube'
     },
     {

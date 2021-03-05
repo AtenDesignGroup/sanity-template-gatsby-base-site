@@ -2,12 +2,9 @@ import React, {useState} from 'react'
 import {Link} from 'gatsby'
 import Arrow from '../../assets/svgs/icons/arrow.svg'
 
-import styles from './header.module.css'
-
 const SubLinks = (props) => {
-  // console.log({props})
   return (
-    <ul className={styles.sublinks} data-depth='1'>
+    <ul data-depth='1'>
       {props.links.map((sublinks, i) => (
         <li key={i}>
 
@@ -38,19 +35,19 @@ function Navigation ({nav, main, top}) {
         if (link.siteLink.includes('https') || link.siteLink.includes('http')) {
           return (<span>
             <a href={link.siteLink} target='_blank' rel='noopener noreferrer' title={link.title}>{link.title}</a>
-            <button className={main && styles.mobileDropdown} tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
+            <button tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
           </span>)
         } else {
           return (<span>
-            <Link to={link.siteLink} title={link.title} className={main && styles.linkWithToggle}>{link.title}</Link>
-            <button className={main && styles.mobileDropdown} tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
+            <Link to={link.siteLink} title={link.title}>{link.title}</Link>
+            <button tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
           </span>)
         }
       } else {
         // No Link
         return (<span>
           {link.title}
-          <button className={main && styles.mobileDropdown} tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
+          <button tabIndex='0' aria-label='Toggle sub navigation' onClick={() => setCondition(condition === i ? null : i)}><Arrow /></button>
         </span>)
       }
     } else {
@@ -62,7 +59,7 @@ function Navigation ({nav, main, top}) {
         if (link.siteLink.includes('https') || link.siteLink.includes('http')) {
           return <a href={link.siteLink} target='_blank' rel='noopener noreferrer' title={link.title}>{link.title}</a>
         } else {
-          return (<Link to={link.siteLink} title={link.title} className={main && styles.linkWithToggle}>{link.title}</Link>)
+          return (<Link to={link.siteLink} title={link.title}>{link.title}</Link>)
         }
       } else {
       // No Link
@@ -72,9 +69,9 @@ function Navigation ({nav, main, top}) {
   }
   return (
     <>
-      <ul className={main && styles.topMainNav} data-depth='0'>
+      <ul data-depth='0'>
         {(nav && nav.links) && nav.links.map((links, i) => (
-          <li key={i} className={main && `${condition === i ? styles.toggled : ''}`}>
+          <li key={i}>
             <SiteLink link={links} i={i} />
             {links.links && links.links.length
               ? <SubLinks links={links.links} />
@@ -82,9 +79,9 @@ function Navigation ({nav, main, top}) {
           </li>
         ))}
       </ul>
-      <ul className={top && styles.topMainNav}>
+      <ul>
         {(top && top.links) && top.links.map((links, i) => (
-          <li key={i} className={styles.hideOnDesktop}><SiteLink link={links} i={i} /></li>
+          <li key={i}><SiteLink link={links} i={i} /></li>
         ))}
       </ul>
     </>

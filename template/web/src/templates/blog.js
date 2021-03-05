@@ -3,8 +3,6 @@ import {graphql, Link} from 'gatsby'
 import Teaser from '../components/PostTeaser/index'
 import Layout from '../containers/layout'
 
-import styles from './blog.module.css'
-
 export default class BlogList extends React.Component {
   render () {
     const todayDate = new Date().toISOString().slice(0, 10)
@@ -19,43 +17,36 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
 
-        <div className='layout__wrapper  noTopMargin noBottomMargin'>
-          <div className='layout__oneCol content__wrapper--whiteBackground'>
-            <div className='layout__colOne'>
+        {posts.map(post => (
+          <Teaser key={post.id} title={post.title} summary={post.summary} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} />
+        ))}
 
-              {posts.map(post => (
-                <Teaser key={post.id} title={post.title} summary={post.summary} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} />
-              ))}
+        <ul>
+          {!isFirst && (
+            <li>
+              <Link to={prevPage} rel='prev'>
+                ← Previous Page
+              </Link>
+            </li>
+          )}
+          {Array.from({length: numPages}, (_, i) => (
+            <li key={`pagination-number${i + 1}`}>
+              {i + 1 === currentPage ? (
+                <> {i + 1} </>
+              ) : (
+                <Link to={`/blog/${i === 0 ? '' : i + 1}`}>{i + 1}</Link>
+              )}
+            </li>
+          ))}
+          {!isLast && (
+            <li>
+              <Link to={nextPage} rel='next'>
+                Next Page →
+              </Link>
+            </li>
+          )}
+        </ul>
 
-              <ul className={styles.pagination}>
-                {!isFirst && (
-                  <li className={styles.prev}>
-                    <Link to={prevPage} rel='prev'>
-                      ← Previous Page
-                    </Link>
-                  </li>
-                )}
-                {Array.from({length: numPages}, (_, i) => (
-                  <li key={`pagination-number${i + 1}`}>
-                    {i + 1 === currentPage ? (
-                      <> {i + 1} </>
-                    ) : (
-                      <Link to={`/blog/${i === 0 ? '' : i + 1}`}>{i + 1}</Link>
-                    )}
-                  </li>
-                ))}
-                {!isLast && (
-                  <li className={styles.next}>
-                    <Link to={nextPage} rel='next'>
-                      Next Page →
-                    </Link>
-                  </li>
-                )}
-              </ul>
-
-            </div>
-          </div>
-        </div>
       </Layout>
     )
   }

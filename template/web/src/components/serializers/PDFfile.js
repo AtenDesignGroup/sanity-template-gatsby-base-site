@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './figure.module.css'
-
 export default (props) => {
   // console.log({props})
   const ID = props._key
@@ -11,7 +9,7 @@ export default (props) => {
   let PDFpath = props.file.asset._ref
   PDFpath = PDFpath.replace('file-', '')
   PDFpath = PDFpath.replace('-pdf', '')
-  PDFpath = `https://cdn.sanity.io/files/a29bfri3/production/${PDFpath}.pdf`
+  PDFpath = `https://cdn.sanity.io/files/${process.env.GATSBY_SANITY_PROJECT_ID}/production/${PDFpath}.pdf`
   return (
     <>
       <object data={PDFpath} type='application/pdf' width='100%' height={height} internalinstanceid={ID}>{alt}

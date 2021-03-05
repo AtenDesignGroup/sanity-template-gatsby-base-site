@@ -34,7 +34,7 @@ const PagePage = ({data: {sanityPage: page}}) => (
     <Page
       title={page.title}
       content={page._rawContent}
-      slug={page?.slug?.current}
+      slug={page.slug.current}
     />
   </Layout>
 )

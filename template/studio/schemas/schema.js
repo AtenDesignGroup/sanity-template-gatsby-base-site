@@ -22,10 +22,7 @@ import mainImage from './objects/mainImage'
 import seo from './objects/seo'
 import form from './objects/form'
 import youtube from './objects/youtube'
-import slideshow from './objects/slideShow'
 import pdfFile from './objects/pdfFile'
-import slideImage from './objects/slideImage'
-import imageGallery from './objects/imageGallery'
 import iframe from './objects/iframe'
 import link from './objects/link'
 import singleLink from './objects/singleLink'
@@ -54,10 +51,7 @@ export default createSchema({
     seo,
     form,
     youtube,
-    slideshow,
     pdfFile,
-    slideImage,
-    imageGallery,
     iframe,
     link,
     singleLink,

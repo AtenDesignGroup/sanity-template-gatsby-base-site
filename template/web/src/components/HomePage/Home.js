@@ -5,7 +5,7 @@ import serializers from '../serializers/serializers'
 
 const Home = ({content}) => {
   return (
-    <div className='portableText'>
+    <div>
       <BasePortableText blocks={content} serializers={serializers} {...clientConfig.sanity} />
     </div>
   )

@@ -3,7 +3,6 @@ import {graphql} from 'gatsby'
 import Layout from '../containers/layout'
 import Teaser from '../components/PostTeaser/index'
 import SEO from '../components/SEO/SEO'
-import styles from '../components/Page/page.module.css'
 
 export const query = graphql`
   query($slug: String!, $today: Date!) {
@@ -71,25 +70,16 @@ const CategoryPage = ({data: {sanityCategory: page, allSanityPost: posts}}) => {
 
     <Layout title={page.title}>
 
-      <div className='layout__wrapper  noTopMargin noBottomMargin'>
-        <div className='layout__oneCol content__wrapper--whiteBackground'>
-          <div className='layout__colOne'>
-
-            {page.seoSettings && page.seoSettings.title && page.seoSettings.description &&
+      {page.seoSettings && page.seoSettings.title && page.seoSettings.description &&
         (<SEO title={page.seoSettings.title} description={page.seoSettings.description} openGraphImage={page.seoSettings.openGraphImage ? page.seoSettings.openGraphImage.asset.url : null} />
         )}
-            {/* <Category title={page.title} slug={page.slug.current} posts={postsTest} /> */}
-            <div className={styles.pageTitleWrapper}>
-              <h1 className={styles.pageTitle}>Blog Category: {page.title}</h1>
-            </div>
-            {postsTest.map(post => (
-              <Teaser key={post.id} title={post.title} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} summary={post.summary} />
 
-            ))}
+      <h1>Blog Category: {page.title}</h1>
 
-          </div>
-        </div>
-      </div>
+      {postsTest.map(post => (
+        <Teaser key={post.id} title={post.title} slug={post.slug.current} date={post.publishedAt.date} category={post.category} tags={post.tags} image={post.mainImage} summary={post.summary} />
+      ))}
+
     </Layout>
   )
 }
