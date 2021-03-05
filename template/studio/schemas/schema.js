@@ -33,7 +33,6 @@ import iframe from './objects/iframe'
 import link from './objects/link'
 import singleLink from './objects/singleLink'
 import logo from './objects/logo'
-import alert from './objects/alert'
 import vimeo from './objects/vimeo'
 import columnContent from './objects/contentComponents/columnContent'
 import sectionHeading from './objects/contentComponents/sectionHeading'
@@ -88,7 +87,6 @@ export default createSchema({
     imageComponent,
     vimeo,
     imageBackground,
-    alert,
     contentViews,
     webform,
     flexibleContentOptions,
