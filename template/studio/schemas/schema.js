@@ -20,7 +20,6 @@ import siteLink from './objects/siteLink'
 import bodyPortableText from './objects/bodyPortableText'
 import mainImage from './objects/mainImage'
 import seo from './objects/seo'
-import form from './objects/form'
 import youtube from './objects/youtube'
 import pdfFile from './objects/pdfFile'
 import iframe from './objects/iframe'
@@ -49,7 +48,6 @@ export default createSchema({
     siteLink,
     navigation,
     seo,
-    form,
     youtube,
     pdfFile,
     iframe,
