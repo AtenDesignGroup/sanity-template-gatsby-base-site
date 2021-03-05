@@ -8,7 +8,7 @@ export const query = graphql`
   query($slug: String!) {
     sanityPost(slug: { current: { eq: $slug } }) {
       title
-      _rawFlexibleContentLayout
+      _rawContent
       publishedAt {
         local
         date: local(formatString: "MMMM Do, YYYY")
@@ -55,7 +55,7 @@ const PostPage = ({data: {sanityPost: page}}) => (
     <Page
       mainImage={page.mainImage && page.mainImage.asset && page.mainImage}
       title={page.title}
-      flexibleContent={page._rawFlexibleContentLayout}
+      content={page._rawContent}
       date={page.publishedAt.date}
       category={page.category}
       tags={page.tags}

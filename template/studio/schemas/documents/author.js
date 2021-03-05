@@ -1,6 +1,6 @@
-//import {MdPerson as Icon} from 'react-icons/fa'
+// import {MdPerson as Icon} from 'react-icons/fa'
 import React from 'react'
-const Icon = () => <span style={{fontSize: "1.5rem"}}>{"🙂"}</span>
+const Icon = () => <span style={{fontSize: '1.5rem'}}>{'🙂'}</span>
 
 export default {
   name: 'author',
@@ -35,13 +35,9 @@ export default {
       title: 'Short Bio'
     },
     {
-      name: 'flexibleContentLayout',
+      name: 'content',
       title: 'Content',
-      type: 'array',
-      description: 'Add content to your site with this field. There is always four available columns, but the website will only show the columns that have content. So if you add content to only two columns, the site will only show two columns.',
-      of: [{
-        type: 'flexibleContentLayout'
-      }]
+      type: 'bodyPortableText'
     },
     {
       title: 'SEO Settings',
@@ -54,7 +50,7 @@ export default {
     select: {
       title: 'title',
       subtitle: 'slug.current',
-      media: 'image',
+      media: 'image'
     },
     prepare (selection) {
       const {title, subtitle, media} = selection

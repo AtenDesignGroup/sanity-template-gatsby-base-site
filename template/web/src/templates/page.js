@@ -8,7 +8,10 @@ export const query = graphql`
   query($slug: String!) {
     sanityPage(slug: { current: { eq: $slug } }) {
       title
-      _rawFlexibleContentLayout
+      _rawContent
+      slug {
+        current
+      }
       seoSettings {
         title
         description
@@ -30,7 +33,8 @@ const PagePage = ({data: {sanityPage: page}}) => (
         )}
     <Page
       title={page.title}
-      flexibleContent={page._rawFlexibleContentLayout}
+      content={page._rawContent}
+      slug={page.slug.current}
     />
   </Layout>
 )

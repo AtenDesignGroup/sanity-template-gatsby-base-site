@@ -1,33 +1,8 @@
+import React from 'react'
 import {Link, graphql, useStaticQuery} from 'gatsby'
-import React, {useEffect, useState} from 'react'
-import {cn} from '../../lib/helpers'
 import Navigation from './Navigation'
-import styles from './header.module.css'
-import Logo from '../../assets/svgs/logo.svg'
 
-
-const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
-  const [mobileStatus, setMobileStatus] = useState(false)
-  useEffect(() => {
-    const handleEsc = (event) => {
-      if (event.keyCode === 27) {
-        setMobileStatus(mobileStatus === false)
-        // console.log('Close')
-      }
-    }
-    window.addEventListener('keydown', handleEsc)
-
-    return () => {
-      window.removeEventListener('keydown', handleEsc)
-    }
-  }, [mobileStatus])
-
-  const toggleMobileNav = e => {
-    e.preventDefault()
-    // console.log('click')
-    setMobileStatus(mobileStatus === false)
-  }
-
+const Header = () => {
   const data = useStaticQuery(graphql`
   {
       mainNav:  sanityNavigation(_id: { eq: "mainNav" }) {
@@ -46,29 +21,23 @@ const Header = ({location, onHideNav, onShowNav, showNav, mainImage}) => {
   `)
   // console.log(data.mainNav)
   return (
-    <>
-      <div className={styles.root}>
-        <div className={styles.wrapper}>
-          <div className={styles.innerWrapper}>
-            <nav className={styles.topMiniNav}>
-              <Navigation nav={data.topMiniNav} />
-            </nav>
-            <div className={styles.branding}>
-              <Link to='/' aria-label='Logo'>
-                <span className={styles.logoWrapper}><Logo /></span>
-              </Link>
-            </div>
-            <button className={mobileStatus ? styles.menuToggleOn : styles.menuToggle} onClick={toggleMobileNav} aria-label='Click this to toggle the main navigation'><span /></button>
+    <div>
+      <nav>
+        <Navigation nav={data.topMiniNav} />
+      </nav>
 
-            <nav className={cn(styles.nav, !mobileStatus ? styles.hideNav : styles.showNav)} role='navigation' aria-label='Main menu'>
-              <Navigation nav={data.mainNav} main top={data.topMiniNav} />
-            </nav>
-
-          </div>
-        </div>
+      <div>
+        <Link to='/' aria-label='Logo'>
+          Logo
+        </Link>
       </div>
 
-    </>
+      <nav role='navigation' aria-label='Main menu'>
+        <Navigation nav={data.mainNav} main top={data.topMiniNav} />
+      </nav>
+
+    </div>
+
   )
 }
 

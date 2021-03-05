@@ -1,10 +1,7 @@
 import React from 'react'
 import getVideoId from 'get-video-id'
 
-// import styles from './figure.module.css'
-
 function Vimeo (props) {
-  // console.log({props})
   if (!props || !props.url) {
     return <div>Missing Vimeo URL</div>
   }

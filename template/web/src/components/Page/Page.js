@@ -1,16 +1,19 @@
 import React from 'react'
-// import PortableText from '../serializers/portableText'
-import ContentComponents from '../serializers/contentComponents/index'
-import FlexibleContentComponents from '../serializers/contentComponents/FlexibleContent'
+import clientConfig from '../../../client-config'
+import BasePortableText from '@sanity/block-content-to-react'
+import serializers from '../serializers/serializers'
+import BlogView from '../serializers/viewComponents/BlogView'
 
-// import styles from './page.module.css'
-
-const Page = ({content, flexibleContent}) => {
+const Page = ({content, slug}) => {
   return (
-    <>
-      {flexibleContent && <FlexibleContentComponents blocks={flexibleContent} />}
-      {content && <ContentComponents blocks={content} />}
-    </>
+    <div>
+      <BasePortableText blocks={content} serializers={serializers} {...clientConfig.sanity} />
+      {slug === 'blog' &&
+      <div>
+        <BlogView />
+      </div>
+      }
+    </div>
   )
 }
 export default Page

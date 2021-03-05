@@ -42,3 +42,7 @@ Navigate into the studio build directory by going to `/build/studio` and run the
 ## Notes
 
 When developing ProjectId and dataset name can be changed in `template-values-development.json`
+
+
+## Sanity Quick Starer URL
+Click on this [link](https://create.sanity.io/?template=brentrobbins%2Fsanity-template-gatsby-base-site) to use this Sanity powered GatsbyJS starer.

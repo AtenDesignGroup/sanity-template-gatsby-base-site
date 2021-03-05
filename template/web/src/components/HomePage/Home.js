@@ -1,17 +1,13 @@
 import React from 'react'
-// import PortableText from '../serializers/portableText'
-import ContentComponents from '../serializers/contentComponents/index'
-import FlexibleContentComponents from '../serializers/contentComponents/FlexibleContent'
-import HomeHero from '../HomeHero'
+import clientConfig from '../../../client-config'
+import BasePortableText from '@sanity/block-content-to-react'
+import serializers from '../serializers/serializers'
 
-// import styles from './page.module.css'
-
-const Home = ({content, flexibleContent}) => {
+const Home = ({content}) => {
   return (
-    <>
-      {flexibleContent && <FlexibleContentComponents blocks={flexibleContent} />}
-      {content && <ContentComponents blocks={content} />}
-    </>
+    <div>
+      <BasePortableText blocks={content} serializers={serializers} {...clientConfig.sanity} />
+    </div>
   )
 }
 export default Home

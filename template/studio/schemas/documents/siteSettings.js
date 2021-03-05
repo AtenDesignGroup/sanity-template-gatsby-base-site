@@ -1,6 +1,5 @@
 import React from 'react'
-const Icon = () => <span style={{fontSize: "1.5rem"}}>{"⚙️"}</span>
-
+const Icon = () => <span style={{fontSize: '1.5rem'}}>{'⚙️'}</span>
 
 export default {
   name: 'siteSettings',
@@ -15,12 +14,6 @@ export default {
       type: 'string',
       title: 'Site Title',
       description: 'This is used in the sitewide footer.'
-    },
-    {
-      name: 'alert',
-      title: 'Sitewide Alert',
-      type: 'alert',
-      options: {collapsible: true, collapsed: true}
     },
     {
       title: 'Global SEO (fallback) Settings',

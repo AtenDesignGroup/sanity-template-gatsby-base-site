@@ -1,7 +1,6 @@
 // import {RiPagesLine as Icon} from 'react-icons/ri'
 import React from 'react'
-const Icon = () => <span style={{fontSize: "1.5rem"}}>{"📝"}</span>
-
+const Icon = () => <span style={{fontSize: '1.5rem'}}>{'📝'}</span>
 
 export default {
   name: 'page',
@@ -29,13 +28,9 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'flexibleContentLayout',
+      name: 'content',
       title: 'Content',
-      type: 'array',
-      description: 'Add content to your site with this field. There is always four available columns, but the website will only show the columns that have content. So if you add content to only two columns, the site will only show two columns.',
-      of: [{
-        type: 'flexibleContentLayout'
-      }]
+      type: 'bodyPortableText'
     },
     {
       title: 'SEO Settings',
@@ -48,13 +43,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'slug.current',
+      subtitle: 'slug.current'
     },
     prepare (selection) {
       const {title, subtitle} = selection
       return {
         title: `${title}`,
-        subtitle: `/${subtitle}`,
+        subtitle: `/${subtitle}`
       }
     }
   }

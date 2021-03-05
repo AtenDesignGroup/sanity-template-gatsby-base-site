@@ -9,44 +9,24 @@ import richDate from 'part:@sanity/form-builder/input/rich-date/schema'
 import author from './documents/author'
 import category from './documents/category'
 import page from './documents/page'
-import landingPage from './documents/landingPage'
 import home from './documents/home'
 import siteSettings from './documents/siteSettings'
 import navigation from './documents/navigation'
 import post from './documents/post'
 import tag from './documents/tag'
-import webform from './documents/webform'
-import submission from './objects/submission'
 
 // Object types
 import siteLink from './objects/siteLink'
 import bodyPortableText from './objects/bodyPortableText'
 import mainImage from './objects/mainImage'
 import seo from './objects/seo'
-import form from './objects/form'
 import youtube from './objects/youtube'
-import slideshow from './objects/slideShow'
 import pdfFile from './objects/pdfFile'
-import slideImage from './objects/slideImage'
-import imageGallery from './objects/imageGallery'
 import iframe from './objects/iframe'
 import link from './objects/link'
 import singleLink from './objects/singleLink'
 import logo from './objects/logo'
-import alert from './objects/alert'
 import vimeo from './objects/vimeo'
-import columnContent from './objects/contentComponents/columnContent'
-import sectionHeading from './objects/contentComponents/sectionHeading'
-import cta from './objects/contentComponents/cta'
-import textBlock from './objects/contentComponents/textBlock'
-import callOut from './objects/contentComponents/callOut'
-import imageComponent from './objects/contentComponents/imageComponent'
-import imageBackground from './objects/contentComponents/imageBackground'
-import contentViews from './objects/contentComponents/contentViews'
-import flexibleContentOptions from './objects/contentComponents/flexibleContentOptions'
-import flexibleContentLayout from './objects/contentComponents/flexibleContentLayout'
-import flexibleContentLayoutOptions from './objects/contentComponents/flexibleContentLayoutOptions'
-import flexibleContent from './objects/contentComponents/flexibleContent'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -59,41 +39,21 @@ export default createSchema({
     post,
     category,
     page,
-    landingPage,
     home,
     tag,
     author,
-    submission,
     bodyPortableText,
     mainImage,
     richDate,
     siteLink,
     navigation,
     seo,
-    form,
     youtube,
-    slideshow,
     pdfFile,
-    slideImage,
-    imageGallery,
     iframe,
     link,
     singleLink,
     logo,
-    columnContent,
-    sectionHeading,
-    cta,
-    textBlock,
-    callOut,
-    imageComponent,
-    vimeo,
-    imageBackground,
-    alert,
-    contentViews,
-    webform,
-    flexibleContentOptions,
-    flexibleContent,
-    flexibleContentLayout,
-    flexibleContentLayoutOptions
+    vimeo
   ])
 })
