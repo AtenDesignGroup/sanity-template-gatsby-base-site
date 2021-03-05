@@ -1,50 +1,37 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import Img from 'gatsby-image'
-import ContentComponents from '../serializers/contentComponents/index'
-import FlexibleContentComponents from '../serializers/contentComponents/FlexibleContent'
+import clientConfig from '../../../client-config'
+import BasePortableText from '@sanity/block-content-to-react'
+import serializers from '../serializers/serializers'
 
-// import styles from './page.module.css'
-import styles from './post.module.css'
-
-const Page = ({title, content, flexibleContent, date, category, tags, mainImage}) => {
+const Page = ({title, content, date, category, tags, mainImage}) => {
   return (
-    <article className={`${styles.root}`}>
+    <article>
 
-      <div className={`content__wrapper ${styles.mainContent}`}>
+      <h1>{title}</h1>
 
-        <div className={`layout__colOne layout__wrapper ${styles.innerMainContent}`}>
+      {date && (<p>{date}</p>)}
 
-          <div className={styles.contentWrapper}>
+      {category && category.slug && category.slug.current && (<div><p>Category: </p><Link to={`/blog/category/${category.slug.current}`}>{category.title}</Link></div>)}
 
-            <h1 className={styles.postTitle}>{title}</h1>
+      {tags && tags.length > 0 && (<div>
+        <p>Tags: </p>
+        <ul>
+          {tags.map(tag => (
+            <li key={tag.id}><Link to={`/blog/tag/${tag.slug.current}`}>{tag.title}</Link></li>
+          ))}
+        </ul>
+      </div>)}
 
-            {date && (<p className={styles.postDate}>{date}</p>)}
+      <p><Link to={`/blog/`}>← Back to the Blog</Link></p>
 
-            <div className={styles.postDets}>
-              {category && category.slug && category.slug.current && (<div className={styles.postCategory}><p>Category: </p><Link to={`/blog/category/${category.slug.current}`}>{category.title}</Link></div>)}
+      {mainImage && (<div>
+        <Img loading='eager' fluid={mainImage.asset.fluid} alt={mainImage.alt} />
+      </div>)}
 
-              {tags && tags.length > 0 && (<div className={styles.postTags}>
-                <p>Tags: </p>
-                <ul>
-                  {tags.map(tag => (
-                    <li key={tag.id}><Link to={`/blog/tag/${tag.slug.current}`}>{tag.title}</Link></li>
-                  ))}
-                </ul>
-              </div>
-              )}
-            </div>
-            <p className={styles.back}><Link to={`/blog/`}>← Back to the Blog</Link></p>
-          </div>
-
-          {mainImage && (<div className={styles.imageWrapper}>
-            <Img loading='eager' fluid={mainImage.asset.fluid} alt={mainImage.alt} />
-          </div>)}
-
-        </div>
-
-        {flexibleContent && <FlexibleContentComponents blocks={flexibleContent} />}
-        {content && <ContentComponents blocks={content} />}
+      <div>
+        <BasePortableText blocks={content} serializers={serializers} {...clientConfig.sanity} />
       </div>
 
     </article>

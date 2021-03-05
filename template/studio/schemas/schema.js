@@ -9,7 +9,6 @@ import richDate from 'part:@sanity/form-builder/input/rich-date/schema'
 import author from './documents/author'
 import category from './documents/category'
 import page from './documents/page'
-import landingPage from './documents/landingPage'
 import home from './documents/home'
 import siteSettings from './documents/siteSettings'
 import navigation from './documents/navigation'
@@ -32,18 +31,6 @@ import link from './objects/link'
 import singleLink from './objects/singleLink'
 import logo from './objects/logo'
 import vimeo from './objects/vimeo'
-import columnContent from './objects/contentComponents/columnContent'
-import sectionHeading from './objects/contentComponents/sectionHeading'
-import cta from './objects/contentComponents/cta'
-import textBlock from './objects/contentComponents/textBlock'
-import callOut from './objects/contentComponents/callOut'
-import imageComponent from './objects/contentComponents/imageComponent'
-import imageBackground from './objects/contentComponents/imageBackground'
-import contentViews from './objects/contentComponents/contentViews'
-import flexibleContentOptions from './objects/contentComponents/flexibleContentOptions'
-import flexibleContentLayout from './objects/contentComponents/flexibleContentLayout'
-import flexibleContentLayoutOptions from './objects/contentComponents/flexibleContentLayoutOptions'
-import flexibleContent from './objects/contentComponents/flexibleContent'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -56,7 +43,6 @@ export default createSchema({
     post,
     category,
     page,
-    landingPage,
     home,
     tag,
     author,
@@ -76,18 +62,6 @@ export default createSchema({
     link,
     singleLink,
     logo,
-    columnContent,
-    sectionHeading,
-    cta,
-    textBlock,
-    callOut,
-    imageComponent,
-    vimeo,
-    imageBackground,
-    contentViews,
-    flexibleContentOptions,
-    flexibleContent,
-    flexibleContentLayout,
-    flexibleContentLayoutOptions
+    vimeo
   ])
 })

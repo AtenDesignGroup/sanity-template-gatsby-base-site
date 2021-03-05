@@ -115,13 +115,8 @@ export default () =>
                 .title('Super Pages')
                 // .icon(MdLocalOffer)
                 .schemaType('page')
-                .child(S.documentTypeList('page').title('Super Pages')),
+                .child(S.documentTypeList('page').title('Super Pages'))
 
-              S.listItem()
-                .title('Landing Pages')
-                // .icon(MdLocalOffer)
-                .schemaType('landingPage')
-                .child(S.documentTypeList('landingPage').title('Landing Pages'))
             ])
         ),
       S.listItem()
@@ -159,7 +154,7 @@ export default () =>
 
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['category', 'post', 'tag', 'author', 'siteSettings', 'home', 'page', 'landingPage', 'navigation'].includes(
+          !['category', 'post', 'tag', 'author', 'siteSettings', 'home', 'page', 'navigation'].includes(
             listItem.getId()
           )
       )

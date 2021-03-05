@@ -10,15 +10,3 @@
     margin: 2rem 0;
   }
 }
-
-/* .layout__left {
-  text-align: left;
-}
-
-.layout__center {
-  text-align: center;
-  @nest & .sectionheading__subtitle {
-    margin: .5rem auto 0 auto;
-    max-width: 720px;
-  }
-} */

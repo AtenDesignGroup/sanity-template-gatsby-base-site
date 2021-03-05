@@ -28,7 +28,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
               />
 
               <div className={styles.root} id='main'>
-                {[children]}
+                <div className={styles.innerWrapper}>
+                  {[children]}
+                </div>
               </div>
             </div>
 

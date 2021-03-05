@@ -1,6 +1,6 @@
-//import {FaNewspaper as Icon} from 'react-icons/fa'
+// import {FaNewspaper as Icon} from 'react-icons/fa'
 import React from 'react'
-const Icon = () => <span style={{fontSize: "1.5rem"}}>{"📰"}</span>
+const Icon = () => <span style={{fontSize: '1.5rem'}}>{'📰'}</span>
 export default {
   name: 'post',
   title: 'Blog Post',
@@ -80,18 +80,15 @@ export default {
       name: 'summary',
       type: 'text',
       title: 'Post Summary',
+      rows: 4,
       description:
         'This will be shown in the post teasers.',
       validation: Rule => Rule.required()
     },
     {
-      name: 'flexibleContentLayout',
+      name: 'content',
       title: 'Content',
-      type: 'array',
-      description: 'Add content to your site with this field. There is always four available columns, but the website will only show the columns that have content. So if you add content to only two columns, the site will only show two columns.',
-      of: [{
-        type: 'flexibleContentLayout'
-      }]
+      type: 'bodyPortableText'
     },
     {
       name: 'mainImage',

@@ -8,7 +8,7 @@ export const query = graphql`
   query sanityHome {
     sanityHome {
       title
-      _rawFlexibleContentLayout
+      _rawContent
       seoSettings {
         title
         description
@@ -27,7 +27,7 @@ const PagePage = ({data: {sanityHome: page}}) => (
     {page.seoSettings && page.seoSettings.title && page.seoSettings.description && (
       <SEO title={page.seoSettings.title} description={page.seoSettings.description} openGraphImage={page.seoSettings.openGraphImage && page.seoSettings.openGraphImage.asset.url} />
     )}
-    <Home flexibleContent={page._rawFlexibleContentLayout} />
+    <Home content={page._rawContent} />
   </Layout>
 )
 

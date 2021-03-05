@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from './Layout'
 
 export default (props) => {
-  // console.log({props})
+  console.log({props})
   return (
     <>
       {props.blocks.map(block =>
