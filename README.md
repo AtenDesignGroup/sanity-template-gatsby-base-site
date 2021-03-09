@@ -9,7 +9,7 @@ This template repo is used by Sanity.io to easily create deployed and configured
 The template contains both a Sanity.io Sanity Studio and a front-end in Gatsby. Both are deployed on Netlify.
 
 
-![The Sanity and Gatsby powered website](https://github.com/brentrobbins/sanity-template-gatsby-base-site/blob/master/assets/frontend.jpg?raw=true)
+![The Sanity and Gatsby powered website](https://github.com/brentrobbins/sanity-template-gatsby-base-site/blob/master/assets/frontend.png?raw=true)
 
 ## Local development
 
