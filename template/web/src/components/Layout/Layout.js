@@ -3,24 +3,14 @@ import {Location} from '@reach/router'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({children, siteTitle}) => (
   <>
-    <a href='#main'>Skip to main</a>
     <Location children={children}>
       {({location}) => {
         return (
           <div>
-            <Header
-              location={location.pathname}
-              siteTitle={siteTitle}
-              onHideNav={onHideNav}
-              onShowNav={onShowNav}
-              showNav={showNav}
-            />
-
-            <div id='main'>
-              {[children]}
-            </div>
+            <Header location={location.pathname} siteTitle={siteTitle} />
+            <div id='main'>{[children]}</div>
           </div>
         )
       }}

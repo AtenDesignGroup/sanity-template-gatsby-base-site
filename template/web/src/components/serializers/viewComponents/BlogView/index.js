@@ -6,8 +6,14 @@ const Page = () => {
   const data = useStaticQuery(graphql`
     {
       allSanityPost(
-        filter: { slug: { current: { ne: null } }, publishedAt: {local: {ne: null}}, title: { ne: null } },
-        sort: {order: DESC, fields: publishedAt___local} limit: 4) {
+        filter: {
+          slug: { current: { ne: null } }
+          publishedAt: { local: { ne: null } }
+          title: { ne: null }
+        }
+        sort: { order: DESC, fields: publishedAt___local }
+        limit: 4
+      ) {
         edges {
           node {
             id
@@ -21,7 +27,7 @@ const Page = () => {
             }
             mainImage {
               asset {
-                fluid(maxWidth:305) {
+                fluid(maxWidth: 305) {
                   ...GatsbySanityImageFluid
                 }
               }
@@ -50,25 +56,31 @@ const Page = () => {
   if (blogPosts.length >= 1) {
     return (
       <ul>
-        {blogPosts.map(post => (
+        {blogPosts.map((post) => (
           <li key={post.node.id}>
+            <h3>
+              <Link to={`/blog/${post.node.slug.current}`}>{post.node.title}</Link>
+            </h3>
 
-            <h3><Link to={`/blog/${post.node.slug.current}`}>{post.node.title}</Link></h3>
-
-            {post.node.mainImage && post.node.mainImage.asset && (<div><Img loading='eager' fluid={post.node.mainImage.asset.fluid} alt={post.node.mainImage.alt} /></div>)}
+            {post.node.mainImage && post.node.mainImage.asset && (
+              <div style={{maxWidth: '300px', width: '100%'}}>
+                <Img
+                  loading='eager'
+                  fluid={post.node.mainImage.asset.fluid}
+                  alt={post.node.mainImage.alt}
+                />
+              </div>
+            )}
 
             <p>{post.node.publishedAt.date}</p>
 
             <p>{post.node.summary}</p>
-
           </li>
         ))}
       </ul>
     )
   } else {
-    return (
-      <p>No blog posts.</p>
-    )
+    return <p>No blog posts.</p>
   }
 }
 

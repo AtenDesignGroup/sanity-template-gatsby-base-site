@@ -8,11 +8,11 @@ const Page = ({content, slug}) => {
   return (
     <div>
       <BasePortableText blocks={content} serializers={serializers} {...clientConfig.sanity} />
-      {slug === 'blog' &&
-      <div>
-        <BlogView />
-      </div>
-      }
+      {slug === 'blog' && (
+        <div>
+          <BlogView />
+        </div>
+      )}
     </div>
   )
 }

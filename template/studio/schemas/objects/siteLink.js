@@ -17,12 +17,6 @@ export default {
       type: 'url',
       validation: Rule => Rule.uri({'allowRelative': true, scheme: ['https', 'http']}),
       title: 'Link'
-    },
-    {
-      title: 'Sub Links',
-      name: 'links',
-      type: 'array',
-      of: [{type: 'siteLink'}]
     }
   ],
   preview: {

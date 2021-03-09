@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/brentrobbins/sanity-template-gatsby-base-site.svg?branch=master)](https://travis-ci.com/brentrobbins/sanity-template-gatsby-base-site)
 
-_Fully customizable blog template with a React.js front-end._
+_Basic Gatsby site with no styling._
 
 This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=brentrobbins%2Fsanity-template-gatsby-base-site).
 
