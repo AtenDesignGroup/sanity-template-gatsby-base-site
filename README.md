@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/AtenDesignGroup/sanity-template-gatsby-base-site.svg?branch=master)](https://travis-ci.com/AtenDesignGroup/sanity-template-gatsby-base-site)
 
-_Basic Gatsby site with no styling._
+_This starter provides a Gatsby basic starter with a few helpful document types get you quickly started building a new site. This starter doesn't include any styling, but does include a Blog and Super Page document types to help you start adding content right away._
 
 This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=AtenDesignGroup%2Fsanity-template-gatsby-base-site).
 
