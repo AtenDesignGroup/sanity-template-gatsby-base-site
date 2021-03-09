@@ -1,3 +1,3 @@
 export default {
-  templateRepoId: 'brentrobbins/sanity-template-gatsby-base-site'
+  templateRepoId: 'AtenDesignGroup/sanity-template-gatsby-base-site'
 }
