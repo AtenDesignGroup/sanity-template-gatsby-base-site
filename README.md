@@ -1,15 +1,15 @@
 # sanity-template-gatsby-base-site
 
-[![Build Status](https://travis-ci.com/brentrobbins/sanity-template-gatsby-base-site.svg?branch=master)](https://travis-ci.com/brentrobbins/sanity-template-gatsby-base-site)
+[![Build Status](https://travis-ci.com/AtenDesignGroup/sanity-template-gatsby-base-site.svg?branch=master)](https://travis-ci.com/AtenDesignGroup/sanity-template-gatsby-base-site)
 
 _Basic Gatsby site with no styling._
 
-This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=brentrobbins%2Fsanity-template-gatsby-base-site).
+This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=AtenDesignGroup%2Fsanity-template-gatsby-base-site).
 
 The template contains both a Sanity.io Sanity Studio and a front-end in Gatsby. Both are deployed on Netlify.
 
 
-![The Sanity and Gatsby powered website](https://github.com/brentrobbins/sanity-template-gatsby-base-site/blob/master/assets/frontend.png?raw=true)
+![The Sanity and Gatsby powered website](https://github.com/AtenDesignGroup/sanity-template-gatsby-base-site/blob/master/assets/frontend.png?raw=true)
 
 ## Local development
 
@@ -45,4 +45,4 @@ When developing ProjectId and dataset name can be changed in `template-values-de
 
 
 ## Sanity Quick Starer URL
-Click on this [link](https://create.sanity.io/?template=brentrobbins%2Fsanity-template-gatsby-base-site) to use this Sanity powered GatsbyJS starer.
+Click on this [link](https://create.sanity.io/?template=AtenDesignGroup%2Fsanity-template-gatsby-base-site) to use this Sanity powered GatsbyJS starer.
