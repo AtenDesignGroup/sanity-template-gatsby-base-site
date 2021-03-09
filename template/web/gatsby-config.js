@@ -12,12 +12,10 @@ module.exports = {
   siteMetadata: {
     title: `<#< sanity.projectTitle >#>`,
     description: `<#< sanity.projectTitle >#>`,
-    siteUrl: `https://example.com`
+    siteUrl: `https://replace-me.com`
   },
   plugins: [
-    'gatsby-plugin-postcss',
     'gatsby-plugin-remove-serviceworker',
-    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -31,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
-        siteUrl: `ttps://example.com`
+        siteUrl: `https://replace-me.com`
       }
     },
     {
@@ -56,21 +54,6 @@ module.exports = {
         token: process.env.SANITY_READ_TOKEN,
         watchMode: !isProd || !isGatsbyCloud,
         overlayDrafts: !isProd || isGatsbyCloud
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: ''
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Source Sans Pro:400,700`
-        ],
-        display: 'swap'
       }
     },
     {

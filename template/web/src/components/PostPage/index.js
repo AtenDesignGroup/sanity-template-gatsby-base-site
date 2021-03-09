@@ -26,7 +26,7 @@ const Page = ({title, content, date, category, tags, mainImage}) => {
 
       <p><Link to={`/blog/`}>← Back to the Blog</Link></p>
 
-      {mainImage && (<div>
+      {mainImage && (<div style={{maxWidth: '620px', width: '100%'}}>
         <Img loading='eager' fluid={mainImage.asset.fluid} alt={mainImage.alt} />
       </div>)}
 

@@ -25,7 +25,6 @@ import pdfFile from './objects/pdfFile'
 import iframe from './objects/iframe'
 import link from './objects/link'
 import singleLink from './objects/singleLink'
-import logo from './objects/logo'
 import vimeo from './objects/vimeo'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -53,7 +52,6 @@ export default createSchema({
     iframe,
     link,
     singleLink,
-    logo,
     vimeo
   ])
 })

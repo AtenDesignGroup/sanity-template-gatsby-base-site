@@ -37,7 +37,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/studio.jpg",
+        "src": "assets/studio.png",
         "alt": "A preview image of the Sanity Studio."
       }
     },
@@ -64,7 +64,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/frontend.jpg",
+        "src": "assets/frontend.png",
         "alt": "A preview image of the blog website."
       },
       "requiredCorsOrigins": [

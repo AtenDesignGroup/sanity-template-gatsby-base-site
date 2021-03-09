@@ -151,17 +151,13 @@ async function createBlogPostPages (graphql, actions) {
     if (blog.errors) {
       Promise.reject(blog.errors)
     }
-    // const blogs = blog.data.allSanityPost.edges.map(({node}) => node)
     const todayDate = new Date().toISOString().slice(0, 10)
-    const test = blog.data.allSanityPost.edges.map(({node}) => node).filter(event => event.publishedAt.local <= todayDate)
+    const post = blog.data.allSanityPost.edges.map(({node}) => node).filter(event => event.publishedAt.local <= todayDate)
 
     const postsPerPage = 8
-    const numPages = Math.ceil(test.length / postsPerPage)
+    const numPages = Math.ceil(post.length / postsPerPage)
 
     Array.from({length: numPages}).forEach((_, i) => {
-    // blogs.forEach(blog => {
-      // actions.createPage({
-      //   path: `blog/${blog.slug.current}/`,
       actions.createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
         component: require.resolve('./src/templates/blog.js'),

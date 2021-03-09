@@ -137,17 +137,6 @@ export default () =>
                     .schemaType('navigation')
                     .documentId('mainNav')
                     .title('Main Nav')
-                ),
-
-              S.listItem()
-                .title('Footer Nav')
-                // .icon(MdLocalOffer)
-                .schemaType('navigation')
-                .child(
-                  S.editor()
-                    .schemaType('navigation')
-                    .documentId('footerNav')
-                    .title('Footer Nav')
                 )
             ])
         ),
